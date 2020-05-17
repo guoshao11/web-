@@ -6,10 +6,10 @@ $(function (){
     $(".checkAll").click(function (){
         isChecked=!isChecked;
         if(isChecked){
-            $(this).attr("src","../images/cart/product_true.png")
+            $(".checkAll").attr("src","../images/cart/product_true.png")
             $(".checkItem").attr("src","../images/cart/product_true.png").attr("checked",true)
         }else{
-            $(this).attr("src","../images/cart/product_normal.png")
+            $(".checkAll").attr("src","../images/cart/product_normal.png")
             $(".checkItem").attr("src","../images/cart/product_normal.png").attr("checked",false)
         }
         sum()

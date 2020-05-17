@@ -20,7 +20,7 @@ input:focus{
 
 /*设置外层容器的样式*/
 
-#container{
+#contatiner{
     width:1000px;
     margin:0 auto;
 }
