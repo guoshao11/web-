@@ -117,6 +117,8 @@
 }
 .action{
     width:126px;
+    /*修改鼠标形状：default箭头，pointer手指*/
+    cursor:default;
 }
 /*2.3 商品记录展示*/
 .content{
