@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery-1.11.3.js">
+
+    </script>
+    <script>
+    $(function (){
+        //1.全选和取消全选
+        $("#checkAll").click(function (){
+
+            $(".checkItem").prop("checked",$(this).prop("checked"));
+        })
+        //2.反选，被选中的商品数量等于商品按钮的数量，视为全选，未被选中的商品数量为0，视为全选
+      /*  //方式一
+        $(".checkItem").click(function (){
+            var i=0;
+            //判断列表中有几个选中元素
+            //遍历jquery列表
+            $(".checkItem").each(function (elem){
+                //console.log(elem)
+                var r = $(this).prop("checked");
+                if(r){
+                    i++;
+
+                }
+
+            })
+
+            //判断是否全选
+            if(i == $(".checkItem").length){
+                $("#checkAll").prop("checked","true");
+            }else{
+                $("#checkAll").prop("checked","false")
+            }
+        })
+        */
+
+        //方式二
+        $(".checkItem").click(function (){
+            //获取被选中的商品数量
+            console.log($(".checkItem:checked").length)
+            //否定筛选 not
+            var len=$(".checkItem").not(".checkItem:checked");
+            console.log(len.length);
+            if(len.length==0){
+                //全选
+                $("#checkAll").prop("checked",true)
+
+            }else{
+                $("#checkAll").prop("checked",false)
+            }
+        });
+    })
+    </script>
+</head>
+<body>
+    <p>
+        <input type="checkbox" id="checkAll">全选
+    </p>
+    <p>
+        <input type="checkbox" class="checkItem">商品
+    </p>
+    <p>
+        <input type="checkbox" class="checkItem">商品
+    </p>
+    <p>
+        <input type="checkbox" class="checkItem">商品
+    </p>
+    <p>
+        <input type="checkbox" class="checkItem">商品
+    </p>
+</body>
+</html>

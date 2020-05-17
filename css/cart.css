@@ -124,9 +124,64 @@
 }
 .item{
     height:115px;
+    float:left;
     text-align:center;
+    background:#fff;
+    border-top:1px solid gray;
+    border-bottom:1px solid gray;
+    margin-bottom:10px;
 }
 .item div{
     float:left;
+    height:115px;
     box-sizing:border-box;
+    text-align:center;
+}
+/*商品栏设置*/
+.item .check{
+    line-height:115px;
+}
+.item .info img{
+    float:left;
+    margin-right:20px;
+    margin-top:15px;
+}
+.item .info p{
+    text-align:left;
+}
+.item .info p:nth-child(2){
+    margin:15px 0 10px 0;
+}
+
+.item .price{
+    color:#997679;
+    margin-top:40px;
+    margin-left:-20px;
+}
+.item .count a{
+    float:left;
+    width:26px;
+    height:26px;
+    line-height:26px;
+    border:1px solid gray;
+    background:#e8e8e8;
+    color:#333;
+    margin-top:43px;
+}
+.item .count input{
+    float:left;
+    width:26px;
+    height:26px;
+    border:1px solid gray;
+    border-left:none;
+    border-right:0;
+    padding:0;
+    text-align:center;
+    margin-top:43px;
+}
+a.minus{
+    margin-left:34px;
+}
+.item .sum,.item .action{
+    line-height:115px;
 }
